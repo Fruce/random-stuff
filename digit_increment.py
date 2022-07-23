@@ -6,7 +6,7 @@ def num_extract(x):
         try:
             if type(int(x[-i])) == type(1):
                 num.append(x[-i])		
-        except:		
+        except:
             break
 
 def zero_extract(num):
@@ -21,11 +21,12 @@ def zero_extract(num):
 #driver code
 x = input("enter a word: ")
 num_extract(x)
-sum = zero_extract(num)
+
 
 if len(num)==0:
 	print(x+'1')
 else:
+    sum = zero_extract(num)
     if len(num) != len(''.join(zeros)+sum):
         print(x[:len(x)-len(num)]+''.join(zeros[:len(zeros)-1])+sum)
     else:
